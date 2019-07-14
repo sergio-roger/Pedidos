@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB0DFD86-6960-4AAB-BF91-1914BC2E0DAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Principal.My.MyApplication</StartupObject>
+    <RootNamespace>Principal</RootNamespace>
+    <AssemblyName>Principal</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Principal.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Principal.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm\Administracion\Configuraciones\frm_modalidad_aux.Designer.vb">
+      <DependentUpon>frm_modalidad_aux.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Administracion\Configuraciones\frm_modalidad_aux.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Administracion\Configuraciones\frm_sexo.Designer.vb">
+      <DependentUpon>frm_sexo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Administracion\Configuraciones\frm_sexo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Administracion\Seguridad\frm_buscar_usuario.Designer.vb">
+      <DependentUpon>frm_buscar_usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Administracion\Seguridad\frm_buscar_usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Administracion\Seguridad\frm_perfil.Designer.vb">
+      <DependentUpon>frm_perfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Administracion\Seguridad\frm_perfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Administracion\Seguridad\frm_usuario.Designer.vb">
+      <DependentUpon>frm_usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Administracion\Seguridad\frm_usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Inicio\frm_login.Designer.vb">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Inicio\frm_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Inicio\frm_principal.Designer.vb">
+      <DependentUpon>frm_principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Inicio\frm_principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Pedidos\frm_estado_pedido.Designer.vb">
+      <DependentUpon>frm_estado_pedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Pedidos\frm_estado_pedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Mesero\frm_mantCliente.Designer.vb">
+      <DependentUpon>frm_mantCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Mesero\frm_mantCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Mesero\frm_mesero_principal.Designer.vb">
+      <DependentUpon>frm_mesero_principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Mesero\frm_mesero_principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Pedidos\frm_pedido.Designer.vb">
+      <DependentUpon>frm_pedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Pedidos\frm_pedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Pedidos\frm_lista_pedido.Designer.vb">
+      <DependentUpon>frm_lista_pedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Pedidos\frm_lista_pedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Pedidos\frm_servir_pedido.Designer.vb">
+      <DependentUpon>frm_servir_pedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Pedidos\frm_servir_pedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Registro\frm_combo.Designer.vb">
+      <DependentUpon>frm_combo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Registro\frm_combo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Registro\frm_mantCombo.Designer.vb">
+      <DependentUpon>frm_mantCombo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Registro\frm_mantCombo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Registro\frm_mantPlato.Designer.vb">
+      <DependentUpon>frm_mantPlato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Registro\frm_mantPlato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Registro\frm_mesa.Designer.vb">
+      <DependentUpon>frm_mesa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Registro\frm_mesa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Registro\frm_plato.Designer.vb">
+      <DependentUpon>frm_plato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Registro\frm_plato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Ventas\frm_buscarCliente.designer.vb">
+      <DependentUpon>frm_buscarCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Ventas\frm_buscarCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Ventas\frm_factura.designer.vb">
+      <DependentUpon>frm_factura.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Ventas\frm_factura.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Ventas\frm_matProducto.designer.vb">
+      <DependentUpon>frm_matProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Ventas\frm_matProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Ventas\frm_producto.designer.vb">
+      <DependentUpon>frm_producto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Ventas\frm_producto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Ventas\mod_facturar.vb" />
+    <Compile Include="Modulos\mod_acceso_bd.vb" />
+    <Compile Include="Modulos\mod_FuncionesGlobales.vb" />
+    <Compile Include="Modulos\mod_funciones_procedure_store.vb" />
+    <Compile Include="Modulos\mod_variables.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frm\Administracion\Configuraciones\frm_modalidad_aux.resx">
+      <DependentUpon>frm_modalidad_aux.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Administracion\Configuraciones\frm_sexo.resx">
+      <DependentUpon>frm_sexo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Administracion\Seguridad\frm_buscar_usuario.resx">
+      <DependentUpon>frm_buscar_usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Administracion\Seguridad\frm_perfil.resx">
+      <DependentUpon>frm_perfil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Administracion\Seguridad\frm_usuario.resx">
+      <DependentUpon>frm_usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Inicio\frm_login.resx">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Inicio\frm_principal.resx">
+      <DependentUpon>frm_principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Pedidos\frm_estado_pedido.resx">
+      <DependentUpon>frm_estado_pedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Mesero\frm_mantCliente.resx">
+      <DependentUpon>frm_mantCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Mesero\frm_mesero_principal.resx">
+      <DependentUpon>frm_mesero_principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Pedidos\frm_pedido.resx">
+      <DependentUpon>frm_pedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Pedidos\frm_lista_pedido.resx">
+      <DependentUpon>frm_lista_pedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Pedidos\frm_servir_pedido.resx">
+      <DependentUpon>frm_servir_pedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Registro\frm_combo.resx">
+      <DependentUpon>frm_combo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Registro\frm_mantCombo.resx">
+      <DependentUpon>frm_mantCombo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Registro\frm_mantPlato.resx">
+      <DependentUpon>frm_mantPlato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Registro\frm_mesa.resx">
+      <DependentUpon>frm_mesa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Registro\frm_plato.resx">
+      <DependentUpon>frm_plato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Ventas\frm_buscarCliente.resx">
+      <DependentUpon>frm_buscarCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Ventas\frm_factura.resx">
+      <DependentUpon>frm_factura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Ventas\frm_matProducto.resx">
+      <DependentUpon>frm_matProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Ventas\frm_producto.resx">
+      <DependentUpon>frm_producto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default-image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_principal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_nuevo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_nuevo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61848.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_borrar_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_borrar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_borrar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_nuevo_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_guardar_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton_buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_mesero.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_mesero_tablet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo_50_45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grabar_50_45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar_50_45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo_azul_50_45.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

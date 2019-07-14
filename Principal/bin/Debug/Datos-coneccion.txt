@@ -1,0 +1,5 @@
+SERVIDOR:SERGIO-PC:
+BD:Proyecto_VII:
+USUARIO::
+CLAVE::
+FFECHA:yyyy/MM/dd:
