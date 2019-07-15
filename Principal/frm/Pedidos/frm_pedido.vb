@@ -57,7 +57,7 @@
     End Function
 
     Private Sub CargarCombos()
-        Dim cadena As String = "select mesa_id, mesa_codigo from Mesa where mesa_estado = 'A'"
+        Dim cadena As String = "select mesa_id, mesa_codigo from Mesa where mesa_estado = 'D'"
         If (CargarCombo(cadena, "mesa_id", "mesa_codigo", cmb_mesa) = False) Then
             mensaje("Pedido", "No se pudo cargar el combo de mesas", "info")
         End If
@@ -253,6 +253,27 @@
         End Try
     End Function
 
+    Private Function actualizarMesaOcupado(mesa_codigo As Integer) As Boolean
+        Try
+            actualizarMesaOcupado = False
+
+            cmd = New SqlClient.SqlCommand("actualizarMesaOcuapdo", cnn)
+            cmd.CommandType = CommandType.StoredProcedure
+
+            cmd.Parameters.AddWithValue("@mesa_codigo ", mesa_codigo)
+            cmd.ExecuteNonQuery()
+
+            actualizarMesaOcupado = True
+
+        Catch ex As Exception
+            actualizarMesaOcupado = False
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
+        End Try
+
+    End Function
+
     Private Function GrabarPedido() As Boolean
         Try
             GrabarPedido = False
@@ -279,7 +300,6 @@
                 If (ObtenerDatosTablaDetallePedido(id_pedido) = False) Then
                     mensaje("Pedido", "Error al grabaar los detalle-pedido", "danger")
                 End If
-
             End If
 
         Catch ex As Exception
@@ -514,6 +534,11 @@
                 End If
 
                 If (GrabarPedido() = False) Then
+                    'Actualizar estado de la mesa 
+                    If (actualizarMesaOcupado(cmb_estado.SelectedValue) = False) Then
+                        MsgBox("Error al actualizar la mesa")
+                    End If
+
                     MsgBox("Hubo un error al guardar el Pedido", MsgBoxStyle.Critical, "Error")
                 Else
                     Limpiar()
@@ -525,10 +550,6 @@
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-    End Sub
-
-    Private Sub dgv_pedido_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_pedido.CellContentClick
-
     End Sub
 
     Private Sub dgv_pedido_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_pedido.CellClick

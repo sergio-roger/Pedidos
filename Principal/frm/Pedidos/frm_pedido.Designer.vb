@@ -170,7 +170,7 @@ Partial Class frm_pedido
         Me.GroupBox4.Controls.Add(Me.txt_descripcion)
         Me.GroupBox4.Controls.Add(Me.txt_codigo)
         Me.GroupBox4.Font = New System.Drawing.Font("Modern No. 20", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(11, 274)
+        Me.GroupBox4.Location = New System.Drawing.Point(11, 182)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(498, 112)
         Me.GroupBox4.TabIndex = 32
@@ -348,9 +348,9 @@ Partial Class frm_pedido
         Me.dgv_pedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_pedido.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.col_check, Me.col_id, Me.col_codigo, Me.col_pedido, Me.col_tipo, Me.col_cantidad, Me.col_precio, Me.col_descuento, Me.col_porcentaje, Me.col_subtotal, Me.col_total})
         Me.dgv_pedido.GridColor = System.Drawing.Color.White
-        Me.dgv_pedido.Location = New System.Drawing.Point(12, 391)
+        Me.dgv_pedido.Location = New System.Drawing.Point(12, 315)
         Me.dgv_pedido.Name = "dgv_pedido"
-        Me.dgv_pedido.Size = New System.Drawing.Size(498, 165)
+        Me.dgv_pedido.Size = New System.Drawing.Size(498, 227)
         Me.dgv_pedido.TabIndex = 52
         '
         'col_check
@@ -505,7 +505,7 @@ Partial Class frm_pedido
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(524, 566)
+        Me.ClientSize = New System.Drawing.Size(524, 551)
         Me.Controls.Add(Me.txt_id_aux)
         Me.Controls.Add(Me.txt_porcentaje)
         Me.Controls.Add(Me.txt_descuento)

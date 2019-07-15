@@ -55,3 +55,14 @@ INSERT INTO [dbo].[Detalles_pedidos]
 		   @det_subtotal,@det_total)
 END
 
+
+---Procedimiento para actualizar estado de mesa
+CREATE PROCEDURE actualizarMesaOcuapdo (@mesa_codigo varchar(10))
+	-- Add the parameters for the stored procedure here
+AS
+BEGIN
+	update Mesa set mesa_estado = 'O' where mesa_codigo = @mesa_codigo
+END
+GO
+
+
