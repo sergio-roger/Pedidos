@@ -822,7 +822,7 @@ Partial Class frm_factura
         Me.id_producto.HeaderText = "ID_PRODUCTO"
         Me.id_producto.Name = "id_producto"
         '
-        'frm_facturar
+        'frm_factura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -833,7 +833,7 @@ Partial Class frm_factura
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "frm_facturar"
+        Me.Name = "frm_factura"
         Me.Text = "Facturación"
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()

@@ -59,3 +59,69 @@ C:\Users\Lab_Cisco_09\Documents\Proyecto_Visual_II\Principal\obj\Debug\Principal
 C:\Users\Lab_Cisco_09\Documents\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_matProducto.resources
 C:\Users\Lab_Cisco_09\Documents\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_producto.resources
 C:\Users\Lab_Cisco_09\Documents\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_factura.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\bin\Debug\Principal.exe.config
+E:\proyectosergio\Proyecto_Visual_II\Principal\bin\Debug\Principal.exe
+E:\proyectosergio\Proyecto_Visual_II\Principal\bin\Debug\Principal.pdb
+E:\proyectosergio\Proyecto_Visual_II\Principal\bin\Debug\Principal.xml
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.vbprojAssemblyReference.cache
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_modalidad_aux.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_sexo.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_buscar_usuario.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_perfil.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_usuario.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_login.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_principal.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_estado_pedido.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_mantCliente.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_mesero_principal.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_pedido.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_lista_pedido.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_servir_pedido.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_combo.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_mantCombo.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_mantPlato.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_mesa.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_plato.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_buscarCliente.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_factura.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_matProducto.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.frm_producto.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.Resources.resources
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.vbproj.GenerateResource.cache
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.vbproj.CoreCompileInputs.cache
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.exe
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.xml
+E:\proyectosergio\Proyecto_Visual_II\Principal\obj\Debug\Principal.pdb
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\bin\Debug\Principal.exe.config
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\bin\Debug\Principal.exe
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\bin\Debug\Principal.pdb
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\bin\Debug\Principal.xml
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.vbprojAssemblyReference.cache
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_modalidad_aux.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_sexo.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_buscar_usuario.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_perfil.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_usuario.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_login.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_principal.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_estado_pedido.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_mantCliente.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_mesero_principal.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_pedido.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_lista_pedido.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_servir_pedido.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_combo.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_mantCombo.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_mantPlato.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_mesa.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_plato.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_buscarCliente.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_factura.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_matProducto.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.frm_producto.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.Resources.resources
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.vbproj.GenerateResource.cache
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.vbproj.CoreCompileInputs.cache
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.exe
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.xml
+D:\2Upse\6 Sexto Semestre\Programacion Visual II\Pedidos\Principal\obj\Debug\Principal.pdb

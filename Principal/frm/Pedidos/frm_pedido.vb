@@ -14,7 +14,7 @@
     Private existeCliente As Boolean
     Private idCliente As Integer
     Private idusuario As Integer = g_int_id_usuario
-
+    Private numero_pedido As Integer = 0
     'Variables auxiliares que ayudaran a guardar el detalle pedido temporalmente
     Private aux_cod As String
     Private aux_pedido As String
@@ -55,6 +55,35 @@
         Catch ex As Exception
             RecuperarCliente = False
             MsgBox(ex.Message)
+        Finally
+            dr.Close()
+            Desconectar()
+        End Try
+    End Function
+
+    Private Function Obtener_N_Pedido() As Integer
+        'select (count(*) + 1) from Pedido
+        Dim n_pedido As Integer = 0
+        Try
+            Dim str_cadenaSql As String = "select (count(*) + 1) as numero from Pedido"
+
+            If (Conectar() = False) Then
+                Exit Function
+            End If
+
+            dr = Execute_reader(str_cadenaSql)
+
+            If (dr.HasRows) Then
+                While (dr.Read)
+                    n_pedido = dr("numero")
+                End While
+            End If
+            Return n_pedido
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return n_pedido
+
         Finally
             dr.Close()
             Desconectar()
@@ -260,7 +289,7 @@
             cmd.Parameters.AddWithValue("@ep_id", cmb_estado.SelectedValue)
             cmd.Parameters.AddWithValue("@ped_observacion", "")
             cmd.Parameters.AddWithValue("@ped_estad", "A")
-            cmd.Parameters.AddWithValue("@pe_codigo", txt_codigo_pedido.Text)
+            cmd.Parameters.AddWithValue("@pe_codigo", numero_pedido)
 
             cmd.ExecuteNonQuery()
 
@@ -462,6 +491,8 @@
             txt_usuario.ReadOnly = True
 
             CargarCombos()
+            numero_pedido = Obtener_N_Pedido()
+            txt_codigo_pedido.Text = numero_pedido.ToString()
             rdb_combo.Checked = False
             rdb_plato.Checked = True
             txt_codigo_pedido.Focus()

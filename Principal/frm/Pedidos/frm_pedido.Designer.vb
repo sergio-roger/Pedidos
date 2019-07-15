@@ -576,6 +576,7 @@ Partial Class frm_pedido
         '
         Me.txt_codigo_pedido.Location = New System.Drawing.Point(90, 63)
         Me.txt_codigo_pedido.Name = "txt_codigo_pedido"
+        Me.txt_codigo_pedido.ReadOnly = True
         Me.txt_codigo_pedido.Size = New System.Drawing.Size(110, 20)
         Me.txt_codigo_pedido.TabIndex = 48
         '
