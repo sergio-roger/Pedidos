@@ -27,40 +27,6 @@
     Private aux_total As String
     Private aux_id As String
 
-    Private Function RecuperarCliente(codigo As String) As Boolean
-        Try
-            RecuperarCliente = False
-            Dim str_cadenaSql As String = ""
-
-            str_cadenaSql = "select top(10) * "
-            str_cadenaSql = str_cadenaSql & " from Cliente c where c.cli_cedula = '" & codigo & "' and cli_estado = 'A'"
-
-            If (Conectar() = False) Then
-                Exit Function
-            End If
-
-            dr = Execute_reader(str_cadenaSql)
-
-            If (dr.HasRows) Then
-                While (dr.Read)
-
-                    txt_cedula.Text = dr("cli_cedula")
-                    txt_nombre.Text = dr("cli_nombres")
-                    txt_apellido.Text = dr("cli_apellidos")
-                    cmb_sexo.SelectedValue = dr("sex_id")
-                End While
-                RecuperarCliente = True
-            End If
-
-        Catch ex As Exception
-            RecuperarCliente = False
-            MsgBox(ex.Message)
-        Finally
-            dr.Close()
-            Desconectar()
-        End Try
-    End Function
-
     Private Function Obtener_N_Pedido() As Integer
         'select (count(*) + 1) from Pedido
         Dim n_pedido As Integer = 0
@@ -94,11 +60,6 @@
         Dim cadena As String = "select mesa_id, mesa_codigo from Mesa where mesa_estado = 'A'"
         If (CargarCombo(cadena, "mesa_id", "mesa_codigo", cmb_mesa) = False) Then
             mensaje("Pedido", "No se pudo cargar el combo de mesas", "info")
-        End If
-
-        Dim cadena_sexo As String = "select sex_id, sex_descripcion from Sexo where sex_estado = 'A'"
-        If (CargarCombo(cadena_sexo, "sex_id", "sex_descripcion", cmb_sexo) = False) Then
-            mensaje("Pedido", "No se pudo cargar el combo de generos", "info")
         End If
 
         Dim cadena_estado As String = "select ep_id, ep_descripcion from Estado_pedido where ep_estado = 'A'"
@@ -176,10 +137,6 @@
     End Sub
 
     Private Sub Limpiar()
-        txt_codigo_pedido.Text = ""
-        txt_cedula.Text = ""
-        txt_nombre.Text = ""
-        txt_apellido.Text = ""
         txt_codigo.Text = ""
         rdb_plato.Checked = True
         rdb_combo.Checked = False
@@ -299,8 +256,6 @@
     Private Function GrabarPedido() As Boolean
         Try
             GrabarPedido = False
-
-            txt_cedula_Leave(Me, New KeyPressEventArgs(ChrW(Keys.Enter)))
 
             'Conectar a la bd 
             If (Conectar() = False) Then
@@ -422,33 +377,6 @@
 
     End Sub
 
-    Private Sub GrabarCliente()
-        Try
-            'If Conectar() = False Then
-            '    Exit Sub
-            'End If
-
-            cmd = New SqlClient.SqlCommand("sp_insertar_actualizar_cliente", cnn)
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@cli_id", 0)
-            cmd.Parameters.AddWithValue("@cli_cedula", txt_cedula.Text)
-            cmd.Parameters.AddWithValue("@cli_nombres", txt_nombre.Text)
-            cmd.Parameters.AddWithValue("@cli_apellidos", txt_apellido.Text)
-            cmd.Parameters.AddWithValue("@sex_id", cmb_sexo.SelectedValue)
-            cmd.Parameters.AddWithValue("@cli_direccion", "")
-            cmd.Parameters.AddWithValue("@cli_celular", "")
-            cmd.Parameters.AddWithValue("@cli_correo", "")
-            cmd.Parameters.AddWithValue("@cli_estado", "A")
-
-            cmd.ExecuteNonQuery()
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            Desconectar()
-        End Try
-    End Sub
-
     Private Sub frm_pedido_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             'MsgBox(g_perfil_id & " ->" & g_str_nombres)
@@ -462,51 +390,6 @@
             rdb_plato.Checked = True
             txt_codigo_pedido.Focus()
 
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
-
-    Private Sub txt_cedula_KeyPress(sender As Object, e As KeyPressEventArgs)
-        Try
-            If (Asc(e.KeyChar) = 13 Or Asc(e.KeyChar) = 9) Then
-                If (RecuperarCliente(txt_cedula.Text)) Then
-                Else
-                    txt_nombre.Focus()
-                End If
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
-
-    Private Sub btn_buscaPlato_Click(sender As Object, e As EventArgs)
-        Try
-            g_str_cedula = ""
-            Dim aux_ced As String
-
-            If (txt_cedula.Text <> "") Then
-                aux_ced = txt_cedula.Text
-            Else
-                aux_ced = txt_cedula.Text
-            End If
-
-            Dim frm As New frm_mantCliente
-            frm.ShowDialog()
-
-            txt_cedula.Text = g_str_cedula
-
-            If (txt_cedula.Text = "") Then
-                txt_cedula.Text = aux_ced
-            End If
-
-            If (txt_cedula.Text <> "") Then
-                txt_cedula_KeyPress(Me, New KeyPressEventArgs(ChrW(Keys.Enter)))
-            Else
-                If (RecuperarCliente(txt_cedula.Text) = False) Then
-                End If
-
-            End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -617,26 +500,6 @@
         End Try
     End Sub
 
-    Private Sub txt_nombre_KeyPress(sender As Object, e As KeyPressEventArgs)
-        Try
-            If (Asc(e.KeyChar) = 13 Or Asc(e.KeyChar) = 9) Then
-                txt_apellido.Focus()
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
-
-    Private Sub txt_codigo_pedido_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_codigo_pedido.KeyPress
-        Try
-            If (Asc(e.KeyChar) = 13 Or Asc(e.KeyChar) = 9) Then
-                txt_cedula.Focus()
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
-
     Private Sub btn_grabar_Click(sender As Object, e As EventArgs) Handles btn_grabar.Click
 
         Try
@@ -661,29 +524,6 @@
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
-        End Try
-    End Sub
-
-    Private Sub txt_cedula_Leave(sender As Object, e As EventArgs)
-        Dim str_cadenaSql As String = ""
-
-        Try
-            If (Conectar() = False) Then
-                Exit Sub
-            End If
-
-            If (txt_cedula.Text <> "") Then
-                str_cadenaSql = "select * from Cliente where cli_cedula = '" & txt_cedula.Text & "' and cli_estado = 'A'"
-                dr = Execute_reader(str_cadenaSql)
-
-                existeCliente = If(dr.HasRows = True, True, False)
-            End If
-
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            dr.Close()
-            Desconectar()
         End Try
     End Sub
 
