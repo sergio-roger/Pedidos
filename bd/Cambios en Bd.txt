@@ -1,0 +1,57 @@
+
+---Cambio en el procedimiento almacenado 
+
+ALTER PROCEDURE [dbo].[sp_insertar_actualizar_pedido]
+(@ped_id int, @usu_id int, @mesa_id int, @ep_id int,@ped_observacion varchar(250),@ped_estado char,
+@pe_codigo varchar(10))
+as
+BEGIN
+	if(@ped_id = 0)
+	begin
+		INSERT INTO [dbo].[Pedido]
+           ([mesa_id]
+           ,[ep_id]
+           ,[ped_observacion]
+           ,[ped_estad]
+           ,[pe_codigo]
+           ,[us_id])
+     VALUES
+           (@mesa_id,@ep_id,@ped_observacion,@ped_estado,@pe_codigo,@usu_id)
+	end
+	else
+	begin
+		UPDATE [dbo].[Pedido]
+	   SET [mesa_id] = @mesa_id
+      ,[ep_id] = @ep_id
+      ,[ped_observacion] = @ped_observacion
+      ,[ped_estad] = @ped_estado
+      ,[pe_codigo] = @pe_codigo
+      ,[us_id] = @usu_id
+	 WHERE ped_id = @ped_id
+	end
+END
+
+----- Detalles Pedido
+
+ALTER PROCEDURE [dbo].[sp_insertar_actualizar_detallePedido]
+ @n_pedido int, @dep_codigo_pedido_bebida int,  @det_pedido varchar(50), @det_tipo varchar(25),
+ @det_cantidad int, @det_precio decimal(6,2), @det_descuento bit,@det_porcentaje int, @det_subtotal decimal(6,2),@det_total decimal(8,2)
+AS
+BEGIN
+INSERT INTO [dbo].[Detalles_pedidos]
+           ([num_pedido]
+           ,[dep_codigo_pedido_bebida]
+           ,[det_pedido]
+           ,[det_tipo]
+           ,[det_cantidad]
+           ,[det_precio]
+           ,[det_descuento]
+           ,[det_porcentaje]
+           ,[det_subtotal]
+           ,[det_total])
+     VALUES
+           (
+		   @n_pedido,  @dep_codigo_pedido_bebida, @det_pedido,@det_tipo,@det_cantidad,@det_precio,@det_descuento,@det_porcentaje,
+		   @det_subtotal,@det_total)
+END
+

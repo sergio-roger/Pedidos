@@ -26,20 +26,10 @@ Partial Class frm_pedido
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txt_usuario = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.txt_cedula = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cmb_mesa = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.btn_buscaPlato = New System.Windows.Forms.Button()
-        Me.cmb_sexo = New System.Windows.Forms.ComboBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txt_apellido = New System.Windows.Forms.TextBox()
-        Me.label_nombre = New System.Windows.Forms.Label()
-        Me.txt_nombre = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.btn_add = New System.Windows.Forms.Button()
         Me.rdb_combo = New System.Windows.Forms.RadioButton()
@@ -80,7 +70,6 @@ Partial Class frm_pedido
         Me.txt_id_aux = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         CType(Me.dgv_pedido, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -125,14 +114,6 @@ Partial Class frm_pedido
         Me.Label5.TabIndex = 47
         Me.Label5.Text = "Usuario"
         '
-        'txt_cedula
-        '
-        Me.txt_cedula.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_cedula.Location = New System.Drawing.Point(16, 34)
-        Me.txt_cedula.Name = "txt_cedula"
-        Me.txt_cedula.Size = New System.Drawing.Size(167, 22)
-        Me.txt_cedula.TabIndex = 46
-        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Label4)
@@ -173,101 +154,6 @@ Partial Class frm_pedido
         Me.Label1.Size = New System.Drawing.Size(37, 13)
         Me.Label1.TabIndex = 48
         Me.Label1.Text = "Mesa"
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.btn_buscaPlato)
-        Me.GroupBox3.Controls.Add(Me.cmb_sexo)
-        Me.GroupBox3.Controls.Add(Me.Label6)
-        Me.GroupBox3.Controls.Add(Me.Label3)
-        Me.GroupBox3.Controls.Add(Me.txt_apellido)
-        Me.GroupBox3.Controls.Add(Me.label_nombre)
-        Me.GroupBox3.Controls.Add(Me.txt_nombre)
-        Me.GroupBox3.Controls.Add(Me.Label2)
-        Me.GroupBox3.Controls.Add(Me.txt_cedula)
-        Me.GroupBox3.Font = New System.Drawing.Font("Modern No. 20", 8.249999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 156)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(503, 116)
-        Me.GroupBox3.TabIndex = 31
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Cliente"
-        '
-        'btn_buscaPlato
-        '
-        Me.btn_buscaPlato.BackgroundImage = Global.Principal.My.Resources.Resources.boton_buscar
-        Me.btn_buscaPlato.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_buscaPlato.Location = New System.Drawing.Point(405, 34)
-        Me.btn_buscaPlato.Name = "btn_buscaPlato"
-        Me.btn_buscaPlato.Size = New System.Drawing.Size(90, 50)
-        Me.btn_buscaPlato.TabIndex = 54
-        Me.btn_buscaPlato.UseVisualStyleBackColor = True
-        '
-        'cmb_sexo
-        '
-        Me.cmb_sexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmb_sexo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmb_sexo.FormattingEnabled = True
-        Me.cmb_sexo.Location = New System.Drawing.Point(208, 79)
-        Me.cmb_sexo.Name = "cmb_sexo"
-        Me.cmb_sexo.Size = New System.Drawing.Size(171, 24)
-        Me.cmb_sexo.TabIndex = 53
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(213, 63)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 13)
-        Me.Label6.TabIndex = 52
-        Me.Label6.Text = "*  Sexo"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(213, 18)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 13)
-        Me.Label3.TabIndex = 52
-        Me.Label3.Text = "*  Apellido"
-        '
-        'txt_apellido
-        '
-        Me.txt_apellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_apellido.Location = New System.Drawing.Point(208, 34)
-        Me.txt_apellido.Name = "txt_apellido"
-        Me.txt_apellido.Size = New System.Drawing.Size(171, 22)
-        Me.txt_apellido.TabIndex = 51
-        '
-        'label_nombre
-        '
-        Me.label_nombre.AutoSize = True
-        Me.label_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_nombre.Location = New System.Drawing.Point(15, 63)
-        Me.label_nombre.Name = "label_nombre"
-        Me.label_nombre.Size = New System.Drawing.Size(59, 13)
-        Me.label_nombre.TabIndex = 50
-        Me.label_nombre.Text = "* Nombre"
-        '
-        'txt_nombre
-        '
-        Me.txt_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_nombre.Location = New System.Drawing.Point(17, 81)
-        Me.txt_nombre.Name = "txt_nombre"
-        Me.txt_nombre.Size = New System.Drawing.Size(166, 22)
-        Me.txt_nombre.TabIndex = 49
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(14, 18)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 13)
-        Me.Label2.TabIndex = 48
-        Me.Label2.Text = "*  Cedula"
         '
         'GroupBox4
         '
@@ -629,7 +515,6 @@ Partial Class frm_pedido
         Me.Controls.Add(Me.dgv_pedido)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.ForeColor = System.Drawing.Color.Black
@@ -644,8 +529,6 @@ Partial Class frm_pedido
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
@@ -661,21 +544,11 @@ Partial Class frm_pedido
     Friend WithEvents Label10 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents txt_cedula As TextBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label1 As Label
     Friend WithEvents cmb_mesa As ComboBox
-    Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents txt_usuario As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents cmb_sexo As ComboBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents txt_apellido As TextBox
-    Friend WithEvents label_nombre As Label
-    Friend WithEvents txt_nombre As TextBox
-    Friend WithEvents btn_buscaPlato As Button
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label9 As Label

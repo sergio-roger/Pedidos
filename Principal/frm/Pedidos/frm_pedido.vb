@@ -214,12 +214,6 @@
                 Exit Function
             End If
 
-            If (txt_cedula.Text = "") Then
-                mensaje("Pedido", "Ingrese la cédula de un cliente", "info")
-                txt_cedula.Focus()
-                Exit Function
-            End If
-
             If (dgv_pedido.RowCount < 1) Then
                 mensaje("Pedido", "Ingrese al menos un plato o un combo", "info")
                 txt_codigo.Focus()
@@ -284,11 +278,10 @@
 
             cmd.Parameters.AddWithValue("@ped_id", id_pedido)
             cmd.Parameters.AddWithValue("@usu_id", idusuario)
-            cmd.Parameters.AddWithValue("@cli_id", idCliente)
             cmd.Parameters.AddWithValue("@mesa_id", cmb_mesa.SelectedValue)
             cmd.Parameters.AddWithValue("@ep_id", cmb_estado.SelectedValue)
             cmd.Parameters.AddWithValue("@ped_observacion", "")
-            cmd.Parameters.AddWithValue("@ped_estad", "A")
+            cmd.Parameters.AddWithValue("@ped_estado", "A")
             cmd.Parameters.AddWithValue("@pe_codigo", numero_pedido)
 
             cmd.ExecuteNonQuery()
@@ -314,22 +307,6 @@
                 Exit Function
             End If
 
-            'Iniciar la transaccion
-            'If (fun_iniciatransaccion() = False) Then
-            '    Exit Function
-            'End If
-
-            'Registrar al cliente si no existe
-
-            If (existeCliente = False) Then
-                GrabarCliente()
-            End If
-
-            'Obtener id_persona a través de su cedula
-            'idCliente = ObtenerIdCliente(txt_cedula.Text)
-            Dim cadenaCliente As String = "select cli_id from Cliente where cli_cedula = '" & txt_cedula.Text & "' and cli_estado = 'A'"
-            idCliente = ObtenerId(cadenaCliente, "cli_id")
-
             If (Conectar()) = False Then
             End If
 
@@ -354,18 +331,6 @@
             GrabarPedido = False
             MsgBox(ex.Message)
         Finally
-
-            'If (GrabarPedido) Then
-            '    If (fun_commit() = False) Then
-            '        'MsgBox("Error no se pudo completar el proceso", MsgBoxStyle.Critical, "Errores durante el proceso")
-            '        If (fun_rolbak() = False) Then
-            '        End If
-            '    End If
-            'Else
-            '    If (fun_rolbak() = False) Then
-            '    End If
-            'End If
-
             Desconectar()
         End Try
     End Function
@@ -418,7 +383,7 @@
             cmd.CommandType = CommandType.StoredProcedure
             cmd.CommandTimeout = 0
 
-            cmd.Parameters.AddWithValue("@ped_id", pedido_id)
+            cmd.Parameters.AddWithValue("@n_pedido", numero_pedido)
             cmd.Parameters.AddWithValue("@dep_codigo_pedido_bebida", CInt(aux_id))
             cmd.Parameters.AddWithValue("@det_pedido", aux_pedido)
             cmd.Parameters.AddWithValue("@det_tipo", aux_tipo)
@@ -502,7 +467,7 @@
         End Try
     End Sub
 
-    Private Sub txt_cedula_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_cedula.KeyPress
+    Private Sub txt_cedula_KeyPress(sender As Object, e As KeyPressEventArgs)
         Try
             If (Asc(e.KeyChar) = 13 Or Asc(e.KeyChar) = 9) Then
                 If (RecuperarCliente(txt_cedula.Text)) Then
@@ -515,7 +480,7 @@
         End Try
     End Sub
 
-    Private Sub btn_buscaPlato_Click(sender As Object, e As EventArgs) Handles btn_buscaPlato.Click
+    Private Sub btn_buscaPlato_Click(sender As Object, e As EventArgs)
         Try
             g_str_cedula = ""
             Dim aux_ced As String
@@ -595,7 +560,7 @@
                     End If
                 End If
             Else
-                Dim frm As New frm_mantCombo 
+                Dim frm As New frm_mantCombo
                 frm.ShowDialog()
 
                 txt_codigo.Text = g_str_codigo
@@ -652,7 +617,7 @@
         End Try
     End Sub
 
-    Private Sub txt_nombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txt_nombre.KeyPress
+    Private Sub txt_nombre_KeyPress(sender As Object, e As KeyPressEventArgs)
         Try
             If (Asc(e.KeyChar) = 13 Or Asc(e.KeyChar) = 9) Then
                 txt_apellido.Focus()
@@ -699,7 +664,7 @@
         End Try
     End Sub
 
-    Private Sub txt_cedula_Leave(sender As Object, e As EventArgs) Handles txt_cedula.Leave
+    Private Sub txt_cedula_Leave(sender As Object, e As EventArgs)
         Dim str_cadenaSql As String = ""
 
         Try
